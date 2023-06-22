@@ -1,0 +1,24 @@
+{% extends 'layouts/main.html' %} {%block content%}
+
+<div class="container-fluid d-flex flex-row justify-content-center mt-5">
+    <div class="d-flex flex-column justify-content-center align-items-center mx-5">
+        <h2 class="my-4">Bienvenido al CMMS de</h2>
+        <img src="../static/images/talar-logo.png" alt="talar-logo" />
+    </div>
+    <img class="my-2 mx-5" width="600px" src="../static/images/talar-vista-aerea.jpg" alt="talar-vista-aerea" />
+</div>
+
+{% if not request.user.is_authenticated %}
+
+<div class="d-flex flex-row justify-content-center align-items-center mt-5">
+    <h5>
+        Por favor
+        <a class="btn btn-success mx-5" href="login/"> Inicie sesión </a>
+        o
+        <a class="btn btn-danger mx-5" href="registro/"> Regístrese </a>
+    </h5>
+</div>
+
+{%endif%}
+
+{%endblock%}
